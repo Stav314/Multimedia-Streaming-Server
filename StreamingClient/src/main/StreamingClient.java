@@ -97,11 +97,11 @@ public class StreamingClient {
             String protocol = (String) sp.protocolChoice.getSelectedItem();
 
             //Change placeholder name "Auto-choice" based on resolution
-            if(protocol=="Auto-choice") {
-		    	if(resolution=="240p") {
+            if(protocol.equals("Auto-choice")) {
+		    	if(resolution.equals("240p")) {
 		    		protocol="TCP";
 		    	}
-		    	else if(resolution=="360p"||resolution=="480p") {
+		    	else if(resolution.equals("360p")||resolution.equals("480p")) {
 		    		protocol="UDP";
 		    	}
 		    	else {
